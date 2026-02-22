@@ -617,4 +617,9 @@ window.addEventListener('scroll', () => {
   document.getElementById('prog').style.width = (st / sh * 100) + '%';
 });
 const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isInters
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('v'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
